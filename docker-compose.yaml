@@ -1,0 +1,16 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  nginx1:
+    image: nginx1_image1
+    ports:
+      - "91:80"
+  nginx2:
+    image: nginx2_image1
+    ports:
+      - "90:80"
+  myhaproxy:
+    image: myhaproxy_image1
+    ports:
+      - "80:80"
+    
+  
