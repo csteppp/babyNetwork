@@ -7,6 +7,10 @@ services:
   nginx2:
     image: nginx2_image1
     ports:
+      - "92:80"
+  nginxsplash:
+    image: nginxsplash_image1
+    ports:
       - "90:80"
   myhaproxy:
     image: myhaproxy_image1
