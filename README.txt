@@ -11,7 +11,7 @@ For more details on custom haproxy pages, see https://www.haproxy.com/blog/serve
 
 To Run:
 
-1. Run all the build-*.bat files
+1. Run 'docker-compose build'
 2. Run 'docker-compose up'
 3. Try the following informative urls to see features work:
     http://localhost   -> shows splash page with index going through haproxy
@@ -21,3 +21,16 @@ To Run:
 	http://localhost:91/foo/foo.html -> shows foo application going straight to nginx
 	http://localhost:92/bar/bar.html -> shows bar application going straight to nginx
 	http://localhost:90 -> shows splash page going straight to nginx
+	
+	
+Useful commands to keep in mind:
+
+docker ps -a 
+docker exec -it nginx1 sh
+
+
+A manual build with docker, not docker-compose:
+
+docker stop nginx1:tag
+docker rmi nginx1_image1:tag
+docker build -t nginx1_image1:tag -f .\Dockerfile-nginx1 .
